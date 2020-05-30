@@ -3,6 +3,83 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  background: #efefef;
+}
+
+.App h1{
+  color: #444;
   text-align: center;
 }
 
+.App {
+  padding: 0px;
+  box-sizing: border-box;
+  width: 60%;
+  height: 100%;
+}
+
+#booklist {
+  padding: 0px;
+  width: 90%;
+}
+
+#booklist li {
+  display: inline-block;
+  margin: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #880E4F;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0,3);
+  cursor: pointer;
+  color: #880E4F;
+}
+
+#add-book {
+  background: #FFFFFF;
+  display: grid;
+  grid-template-rows: auto;
+  width: 60%;
+  margin: 12px;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid #880E4F;
+}
+
+#add-book div {
+  margin: 10px;
+}
+
+#add-book > button {
+  width: 100px;
+  margin-right: 12px;
+  color: #000000;
+  background-color: #AD1457;
+  border-radius: 4px;
+  border: 1px solid #AD1457;
+  justify-self: end;
+  cursor: pointer;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field > select, input {
+  width: 65%;
+  border: 1px solid grey;
+}
+
+.field select {
+  background: #FFFFFF;
+}
+#book-details {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: #AD1457;
+  color: #FFFFFF;
+  padding: 10px 20px;
+}

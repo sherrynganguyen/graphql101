@@ -12,9 +12,9 @@ class BookDetails extends React.Component {
       return (
         <div>
           <h2>{book.name}</h2>
-          <p>{book.genre}</p>
-          <p>{book.author.name}</p>
-          <p>{book.author.age}</p>
+          <p>Genre: {book.genre}</p>
+          <p>Author: {book.author.name}</p>
+          <p>Author Age: {book.author.age}</p>
           <p>All books by this author:</p>
           <ul className="other-books">
             {book.author.books.map((book) => {
@@ -31,7 +31,6 @@ class BookDetails extends React.Component {
   render () {
     return (
       <div id="book-details">
-        <p>Output Book Details here</p>
         {this.displayBookDetails()}
       </div>
     );

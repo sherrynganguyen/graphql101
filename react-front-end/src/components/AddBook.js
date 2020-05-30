@@ -60,7 +60,6 @@ class AddBook extends React.Component {
             {this.renderAuthors()}
           </select>
         </div>
-
         <button>+</button>
       </form>
     );
