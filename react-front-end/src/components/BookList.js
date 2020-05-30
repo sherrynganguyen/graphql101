@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {useQuery} from '@apollo/react-hooks';
 import {graphql} from 'react-apollo';
@@ -8,14 +8,18 @@ import {getBooksQuery} from '../queries/queries';
 import BookDetails from './BookDetails';
 
 // const BookList = () => {
+//   const [selected, setSelected] = useState(null);
 //   const { loading, err, data } = useQuery(getBooksQuery)
 //   if (loading) return <div>Loading books...</div>;
 //   if (err) return  <div>Error</div>;
-//   return data.books.map(book => {
-//     return(
-//       <li key={book.id}>{book.name}</li>
-//     );
-//   })
+//   return (
+//     <div>
+//       {data.books.map(book => {
+//         return <li key={book.id} onClick={(e) => {setSelected(book.id)}}>{book.name}</li>;
+//       })}  
+//       <BookDetails bookId={selected}/>
+//     </div>
+//   )
 // }
 
 class BookList extends React.Component {
