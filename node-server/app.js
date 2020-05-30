@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const graphqlHTTP = require('express-graphql');
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const DBUSER = process.env.DBUSER;
 const DBPASSWORD = process.env.DBPASSWORD;
@@ -12,6 +13,7 @@ const DBPASSWORD = process.env.DBPASSWORD;
 PORT = 8080;
 const app = express();
 app.use(morgan('dev'));
+app.use(cors())
 
 const url = `mongodb+srv://${DBUSER}:${DBPASSWORD}@cluster0-onasa.mongodb.net/graphql?retryWrites=true&w=majority`
 
